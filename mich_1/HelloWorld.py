@@ -24,33 +24,54 @@ print("Hello World!")
 # things to remember in.
 
 # We can then get some input for the user and give them a prompt...
-users_name = input("What is your name?")
+users_name = input("What is your name? ")
 print("Hello there " + users_name)
 
 # I wonder if we could do some maths
 some_number_input = input("Give me a number: ")
-
-# Hang on: what on earth are we doing here with int(some_number_string)?
-
-# So we need a brief introduction into types. Not romantic ones,
-#  but computationally. Arguably more exciting? Definitely more exciting!
-
-# Let's think about it like types of alcohol you can drink on a night out.
-#  If you mix drinks: bad things happen. Same with computers and types:
-#  much like you crash, your program will crash if you mix types.
-
-# What types have we got then?
-# 'string' - a series of letters, numbers and symbols (words basically)
-# 'int' - a whole number
-
-# Luckily unlike mixing drinks, you can magic the types into each other
-#  so long as it's a valid conversion. We can change 8782 (int) to "8782" (string)
-#  or we can do "9312" (string) to 9312 (int). But not "8s7sabcs" (string) to an int
 some_number = int(some_number_input)
 added_ten = 10 + some_number
+# hang on! why did we do int() before we used it
+# read the bit on types on the wiki for this lesson for an explanation
 
 # You should know what's going on here now,
 added_ten_string = str(added_ten)
 
 # and here...
 print("Look I know that " + some_number_input + " + 10 is "+ added_ten_string +"!")
+
+# BASIC MATHEMATICAL OPERATORS
+# let's store a number to do our calculations with
+big_number = 1200
+print('We started with ' + str(big_number))
+# we can do basic addition
+big_number_add = big_number + 217
+print('Adding 217 got us ' + str(big_number_add))
+# or subtraction
+big_number_take = big_number - 231
+print('Taking 231 got us ' + str(big_number_take))
+# or multiplication
+big_number_multiply = big_number * 42
+print('Multiplying by 42 got us ' + str(big_number_multiply))
+# or take a number to a power such as 2 cubed
+print('2 cubed is ' + str(2**3))
+
+# DIFFERENT TYPES OF DIVISION
+# 'float' division
+third = 1 / 3
+print('1/3 got us ' + str(third))
+half = 1.0 / 2.0
+print('1.0/2.0 got us ' + str(half))
+# integer division
+result_one = 64 // 20
+print('64//20 gave us ' + str(result_one))
+result_two = 30.0//9.0
+print('30.0//9.0 gave us ' + str(result_two))
+
+# MODULO OPERATOR
+# when it goes in exactly we get 0
+print('6 % 3: ' + str(6 % 3))
+print('4 % 2: ' + str(4 % 2))
+# if not we get the remainder
+print('9 % 2: ' + str(9 % 2))
+print('562 % 52: ' + str(562 % 52))
